@@ -8,7 +8,7 @@ from sphinx.util import logging
 from sphinx.util.nodes import make_refnode
 from sphinx.writers.html import HTMLTranslator
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 logger = logging.getLogger(__name__)
 
@@ -58,7 +58,7 @@ def process_svg_nodes(app: Sphinx, doctree: nodes.document, docname: str):
     '''Process after doctree resolved
     '''
     # This process is done only when target is html.
-    if app.builder.name not in ['html', 'singlehtml']:
+    if app.builder.name != 'html':
         return
 
     for node in doctree.traverse(nodes.image):
