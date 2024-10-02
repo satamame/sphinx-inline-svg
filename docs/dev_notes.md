@@ -29,3 +29,14 @@
     ```
     > py -m build .
     ```
+
+### 公開
+
+1. TestPyPI に公開する。
+    ```
+    > rye publish --repository testpypi --repository-url https://test.pypi.org/legacy/ --username __token__ --token pypi-Xxx
+    ```
+1. PyPI に公開する。
+    ```
+    > rye publish --username __token__ --token pypi-Xxx
+    ```
