@@ -45,7 +45,7 @@ Add CSS class to SVG image to be inlined.
     :class: inline-svg
 ```
 
-As of MyST, enable `attrs_inline` in conf.py.
+As for MyST, enable `attrs_inline` in conf.py.
 
 ```python
 # conf.py
@@ -84,9 +84,9 @@ def setup(app):
 
 To make text in SVG a hyperlink, for example, edit it as follows in [draw.io](https://app.diagrams.net).
 
-![](img/drawio_edit_link.png)
+![drawio_edit_link.png](https://raw.githubusercontent.com/satamame/sphinx-inline-svg/main/img/drawio_edit_link.png)
 
-![](img/drawio_link_dialog.png)
+![drawio_link_dialog.png](https://raw.githubusercontent.com/satamame/sphinx-inline-svg/main/img/drawio_link_dialog.png)
 
 ### Link notation
 

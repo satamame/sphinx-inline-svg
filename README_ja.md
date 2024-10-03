@@ -82,9 +82,9 @@ def setup(app):
 
 SVG 内のテキストをハイパーリンクにするには、たとえば [draw.io](https://app.diagrams.net) で以下のように編集します。
 
-![](img/drawio_edit_link.png)
+![drawio_edit_link.png](https://raw.githubusercontent.com/satamame/sphinx-inline-svg/main/img/drawio_edit_link.png)
 
-![](img/drawio_link_dialog.png)
+![drawio_link_dialog.png](https://raw.githubusercontent.com/satamame/sphinx-inline-svg/main/img/drawio_link_dialog.png)
 
 ### リンクの書き方
 

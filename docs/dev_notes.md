@@ -25,9 +25,9 @@
 
 ### ビルド
 
-1. グローバルの Python で build を実行。
+1. rye の build コマンドを実行。
     ```
-    > py -m build .
+    > rye build
     ```
 
 ### 公開
