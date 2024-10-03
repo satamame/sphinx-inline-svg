@@ -1,6 +1,6 @@
 # 開発メモ
 
-## やったこと
+## 開始～公開
 
 ### Rye のインストール
 
@@ -34,9 +34,37 @@
 
 1. TestPyPI に公開する。
     ```
-    > rye publish --repository testpypi --repository-url https://test.pypi.org/legacy/ --username __token__ --token pypi-Xxx
+    > rye publish --repository testpypi --repository-url https://test.pypi.org/legacy/ --username __token__ --token pypi-ToKeN
     ```
 1. PyPI に公開する。
     ```
-    > rye publish --username __token__ --token pypi-Xxx
+    > rye publish --username __token__ --token pypi-ToKeN
+    ```
+
+## テスト
+
+### テスト環境の準備
+
+1. pytest をインストールした。
+    ```
+    > rye add --dev pytest
+    ```
+1. tests フォルダを作った。
+1. グローバルの tox を更新した。
+    ```
+    > py -m pip install -U tox
+    ```
+1. tox.ini を書いた。
+1. `py38` で依存関係が解決できなかったので、Python 3.9 以上を要求するようにした。
+1. test_smoke.py を書いた。
+
+### テストの実行
+
+- 開発環境で実行
+    ```
+    > rye run pytest
+    ```
+- tox で実行
+    ```
+    > tox
     ```
