@@ -96,7 +96,7 @@ Link destination that is generated after build depends on Link notation.
 |-|-|-|-|
 |Starts with "/".|Path from project root.|/index.rst|Top page.|
 |Starts with "#".|Defined cross-reference target.|#target-1|Position defined as "#target-1" in the project.|
-|Starts with "http://" and so on.|As is.|https&#58;\/\/google&#46;com|The site on the Internet.|
+|Starts with "http://" and so on.|As is.|https:&#8203;//google&#8203;.com|The site on the Internet.|
 |Other than above.|Relative path from the page.|detail.rst|detail.html file in the same directory.|
 
 > [!NOTE]
