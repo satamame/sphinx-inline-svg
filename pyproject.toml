@@ -24,7 +24,7 @@ Homepage = "https://github.com/satamame/sphinx-inline-svg"
 Repository = "https://github.com/satamame/sphinx-inline-svg.git"
 Issues = "https://github.com/satamame/sphinx-inline-svg/issues"
 # Documentation = "https://github.com/satamame/sphinx-inline-svg/blob/main/README.md"
-# Changelog = ""
+Changelog = "https://github.com/satamame/sphinx-inline-svg/releases"
 
 [build-system]
 requires = ["hatchling"]
