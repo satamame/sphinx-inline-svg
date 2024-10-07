@@ -61,7 +61,7 @@ def process_svg_nodes(app: Sphinx, doctree: nodes.document, docname: str):
     if app.builder.name != 'html':
         return
 
-    for node in doctree.traverse(nodes.image):
+    for node in doctree.findall(nodes.image):
         if node['uri'].endswith('.svg'):
             svg_path = app.srcdir / node['uri']
             try:
