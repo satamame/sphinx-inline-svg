@@ -18,10 +18,17 @@ def sphinx_app(request):
     '''
     project_dir = Path(__file__).parent.resolve() / request.param
 
+    # Get confoverrides from marker.
+    marker = request.node.get_closest_marker('sphinx')
+    confoverrides = marker.kwargs.get('confoverrides', {}) if marker else {}
+
     app = SphinxTestApp(
         buildername='html',
         srcdir=project_dir / 'source',
-        builddir=project_dir / 'build')
+        builddir=project_dir / 'build',  # See below.
+        confoverrides=confoverrides)
+
+    # Actual destination (build/html) is `sphinx_app.outdir` in test codes.
 
     # Clear build directory in advance.
     shutil.rmtree(project_dir / 'build', ignore_errors=True)
