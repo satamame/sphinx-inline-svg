@@ -7,4 +7,5 @@ wheels/
 *.egg-info
 
 # venv
-.venv
+.venv/
+.tox/
