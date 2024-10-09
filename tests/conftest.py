@@ -8,7 +8,7 @@ from sphinx.testing.util import SphinxTestApp
 pytest_plugins = ('sphinx.testing.fixtures',)
 
 
-@pytest.fixture(scope='session', params=['proj_rest'])
+@pytest.fixture(scope='session', params=['proj_rest', 'proj_myst'])
 def sphinx_app(request):
     '''Provide a Sphinx instance for testing as fixture
 

@@ -36,6 +36,7 @@ dev-dependencies = [
     "ruff>=0.6.8",
     "pytest>=8.3.3",
     "tomli>=2.0.1; python_version < '3.11'",
+    "myst-parser>=4.0.0",
 ]
 
 [tool.hatch.metadata]

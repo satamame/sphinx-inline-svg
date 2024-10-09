@@ -1,11 +1,7 @@
-
-import pytest
 from lxml import html
 
 
-# @pytest.mark.parametrize('sphinx_param', ['proj_rest', 'proj_myst'])
-@pytest.mark.sphinx('proj_rest')
-class TestNormal:
+class TestLink:
     def test_link_to_top(self, sphinx_app):
         '''Test if hyperlink to document root is generated
         '''
