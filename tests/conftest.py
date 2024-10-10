@@ -4,11 +4,18 @@ from pathlib import Path
 import pytest
 from sphinx.testing.util import SphinxTestApp
 
-# For the marker @pytest.mark.sphinx
-pytest_plugins = ('sphinx.testing.fixtures',)
+
+def pytest_configure(config):
+    '''Special function (hook) called by pytest
+    '''
+    # Define `sphinx_config` marker to overwrite config values.
+    config.addinivalue_line(
+        "markers",
+        "sphinx_config(**kwargs): mark test to set specific config in conf.py"
+    )
 
 
-@pytest.fixture(scope='session', params=['proj_rest', 'proj_myst'])
+@pytest.fixture(params=['proj_rest', 'proj_myst'])
 def sphinx_app(request):
     '''Provide a Sphinx instance for testing as fixture
 
@@ -18,9 +25,10 @@ def sphinx_app(request):
     '''
     project_dir = Path(__file__).parent.resolve() / request.param
 
-    # Get confoverrides from marker.
-    marker = request.node.get_closest_marker('sphinx')
-    confoverrides = marker.kwargs.get('confoverrides', {}) if marker else {}
+    # Get confoverrides from markers.
+    confoverrides = {}
+    for marker in request.node.iter_markers(name="sphinx_config"):
+        confoverrides.update(marker.kwargs)
 
     app = SphinxTestApp(
         buildername='html',
