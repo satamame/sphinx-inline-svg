@@ -64,7 +64,13 @@
     ```
     > rye run pytest
     ```
+- カバレッジつきで実行
+    ```
+    > rye run pytest --cov=sphinx_inline_svg
+    ```
 - tox で実行
     ```
     > tox
     ```
+- Testing パネルから実行する場合は、仮想環境に入っておくこと。
+    - tests フォルダをカバレッジから除外する方法が分からなかったので、settings.json で `--cov` オプションを設定している。これにより、`Run Test with Coverage` しなくてもカバレッジが走る。
