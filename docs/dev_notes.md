@@ -66,7 +66,7 @@
     ```
 - カバレッジつきで実行
     ```
-    > rye run pytest --cov=sphinx_inline_svg
+    > rye run pytest --cov=sphinx_inline_svg --cov-report=html
     ```
 - tox で実行
     ```
