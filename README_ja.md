@@ -57,7 +57,7 @@ myst_enable_extensions = [
 ![](img/chart.drawio.svg){.inline-svg}
 ```
 
-`inline-svg` クラスを CSS で定義します。
+実際にスタイルを変えたければ、`inline-svg` クラスを CSS で定義します。
 
 ```css
 /* _static/css/custom.css */
@@ -69,7 +69,7 @@ myst_enable_extensions = [
 }
 ```
 
-_static/css 内で定義した場合、以下のように conf.py で追加します。
+そして、そのファイルを conf.py で追加します。
 
 ```python
 # conf.py
@@ -77,6 +77,9 @@ _static/css 内で定義した場合、以下のように conf.py で追加し�
 def setup(app):
     app.add_css_file('css/custom.css')
 ```
+
+> [!NOTE]
+> クラスのスタイルを定義しなくても、クラスを追加した SVG 画像はインライン化されます。
 
 ## ハイパーリンク
 

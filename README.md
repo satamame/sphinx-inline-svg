@@ -59,7 +59,7 @@ myst_enable_extensions = [
 ![](img/chart.drawio.svg){.inline-svg}
 ```
 
-Define `inline-svg` class in CSS.
+Define `inline-svg` class in CSS if actual style is needed.
 
 ```css
 /* _static/css/custom.css */
@@ -71,7 +71,7 @@ Define `inline-svg` class in CSS.
 }
 ```
 
-Add it in conf.py as follows if defined in _static/css.
+And add it in conf.py as follows.
 
 ```python
 # conf.py
@@ -79,6 +79,9 @@ Add it in conf.py as follows if defined in _static/css.
 def setup(app):
     app.add_css_file('css/custom.css')
 ```
+
+> [!NOTE]
+> Even if you don't define actual style, giving the class will inline SVGs.
 
 ## Hyperlink
 

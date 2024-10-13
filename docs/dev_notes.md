@@ -72,5 +72,7 @@
     ```
     > tox
     ```
-- Testing パネルから実行する場合は、仮想環境に入っておくこと。
+- Testing パネルから実行する場合
+    - 設定 (*) により仮想環境の pytest を使うはずだが、だめならターミナルで仮想環境に入ってから実行してみる。
+        - (*) settings.json の "python.testing.pytestPath"。
     - tests フォルダをカバレッジから除外する方法が分からなかったので、settings.json で `--cov` オプションを設定している。これにより、`Run Test with Coverage` しなくてもカバレッジが走る。

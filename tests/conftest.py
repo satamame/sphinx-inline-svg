@@ -18,10 +18,6 @@ def pytest_configure(config):
 @pytest.fixture(params=['proj_rest', 'proj_myst'])
 def sphinx_app(request):
     '''Provide a Sphinx instance for testing as fixture
-
-    scope='session' creates the instance once during a test run
-    for each of 'proj_rest' and 'proj_myst'.
-    @pytest.mark.sphinx() marker decides which instance to use.
     '''
     project_dir = Path(__file__).parent.resolve() / request.param
 

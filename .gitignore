@@ -8,4 +8,7 @@ wheels/
 
 # venv
 .venv/
+
+# test
 .tox/
+.coverage
