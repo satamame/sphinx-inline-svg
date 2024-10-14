@@ -12,3 +12,6 @@ wheels/
 # test
 .tox/
 .coverage
+
+# draw.io temporary files
+.$*
