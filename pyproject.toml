@@ -46,3 +46,6 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/sphinx_inline_svg"]
+
+[tool.coverage.run]
+omit = ["tests/*"]

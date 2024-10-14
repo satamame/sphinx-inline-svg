@@ -9,5 +9,5 @@
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "python.testing.pytestPath": "${workspaceFolder}/.venv/Scripts/pytest",
-    "python.testing.pytestArgs": ["--cov=sphinx_inline_svg", "--cov-report=html"]
+    "python.testing.pytestArgs": ["--cov-report=html"]
 }

@@ -66,7 +66,7 @@
     ```
 - カバレッジつきで実行
     ```
-    > rye run pytest --cov=sphinx_inline_svg --cov-report=html
+    > rye run pytest --cov --cov-report=html
     ```
 - tox で実行
     ```
@@ -75,4 +75,5 @@
 - Testing パネルから実行する場合
     - 設定 (*) により仮想環境の pytest を使うはずだが、だめならターミナルで仮想環境に入ってから実行してみる。
         - (*) settings.json の "python.testing.pytestPath"。
-    - tests フォルダをカバレッジから除外する方法が分からなかったので、settings.json で `--cov` オプションを設定している。これにより、`Run Test with Coverage` しなくてもカバレッジが走る。
+- tests フォルダをカバレッジから除外するために、pyproject.toml の "tool.coverage.run" セクションで `omit` を設定している。
+    - これの代わりに settings.json の "python.testing.pytestArgs" で `--cov=xx` 等と設定すると、`Run Tests` や `Debug Tests` で coverage が走ってしまう。そして `Debug Tests` がブレークポイントで止まらないという問題がある。
