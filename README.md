@@ -59,7 +59,7 @@ myst_enable_extensions = [
 ![](img/chart.drawio.svg){.inline-svg}
 ```
 
-Define `inline-svg` class in CSS.
+Define `inline-svg` class in CSS if actual style is needed.
 
 ```css
 /* _static/css/custom.css */
@@ -71,7 +71,7 @@ Define `inline-svg` class in CSS.
 }
 ```
 
-Add it in conf.py as follows if defined in _static/css.
+And add it in conf.py as follows.
 
 ```python
 # conf.py
@@ -79,6 +79,9 @@ Add it in conf.py as follows if defined in _static/css.
 def setup(app):
     app.add_css_file('css/custom.css')
 ```
+
+> [!NOTE]
+> Even if you don't define actual style, giving the class will inline SVGs.
 
 ## Hyperlink
 
@@ -120,3 +123,9 @@ inline_svg_classes = ['inline-svg', 'selectable-svg']
 
 > [!NOTE]
 > The svg element in SVG file saved by draw.io has "content" attribute, but this is data for editing by the draw.io app, so it is not necessary for the svg element to be inlined.
+
+## Known problems
+
+It has been reported that inlining SVG images saved by [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension of VSCode with sphinx-inline-svg results in garbled characters. 😥
+
+In addition, hyperlinks in SVG images saved by Draw.io Integration may not become clickable. In such cases, inlining with sphinx-inline-svg does not make them clickable. 😥

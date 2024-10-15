@@ -57,7 +57,7 @@ myst_enable_extensions = [
 ![](img/chart.drawio.svg){.inline-svg}
 ```
 
-`inline-svg` クラスを CSS で定義します。
+実際にスタイルを変えたければ、`inline-svg` クラスを CSS で定義します。
 
 ```css
 /* _static/css/custom.css */
@@ -69,7 +69,7 @@ myst_enable_extensions = [
 }
 ```
 
-_static/css 内で定義した場合、以下のように conf.py で追加します。
+そして、そのファイルを conf.py で追加します。
 
 ```python
 # conf.py
@@ -77,6 +77,9 @@ _static/css 内で定義した場合、以下のように conf.py で追加し�
 def setup(app):
     app.add_css_file('css/custom.css')
 ```
+
+> [!NOTE]
+> クラスのスタイルを定義しなくても、クラスを追加した SVG 画像はインライン化されます。
 
 ## ハイパーリンク
 
@@ -118,3 +121,11 @@ inline_svg_classes = ['inline-svg', 'selectable-svg']
 
 > [!NOTE]
 > draw.io で保存した SVG ファイルの svg 要素には content 属性がありますが、これは draw.io アプリで編集時に使うデータなので、インライン化して表示する svg 要素には不要です。
+
+## 既知の問題
+
+### Draw.io Integration で保存した SVG 画像
+
+VSCode の [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) 拡張機能を使って VSCode 上で保存した SVG 画像を sphinx-inline-svg でインライン化すると、文字化けが起きるという報告があります。😥
+
+また、Draw.io Integration で保存した SVG 画像のハイパーリンクがクリック可能にならない場合があります。その場合、sphinx-inline-svg でインライン化してもクリック可能になりません。😥
