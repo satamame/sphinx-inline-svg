@@ -123,3 +123,9 @@ inline_svg_classes = ['inline-svg', 'selectable-svg']
 
 > [!NOTE]
 > The svg element in SVG file saved by draw.io has "content" attribute, but this is data for editing by the draw.io app, so it is not necessary for the svg element to be inlined.
+
+## Known problems
+
+It has been reported that inlining SVG images saved by [Draw.io Integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) extension of VSCode with sphinx-inline-svg results in garbled characters. 😥
+
+In addition, hyperlinks in SVG images saved by Draw.io Integration may not become clickable. In such cases, inlining with sphinx-inline-svg does not make them clickable. 😥
