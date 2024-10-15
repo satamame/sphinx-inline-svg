@@ -7,4 +7,11 @@ wheels/
 *.egg-info
 
 # venv
-.venv
+.venv/
+
+# test
+.tox/
+.coverage
+
+# draw.io temporary files
+.$*

@@ -8,7 +8,7 @@ from sphinx.util import logging
 from sphinx.util.nodes import make_refnode
 from sphinx.writers.html import HTMLTranslator
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 logger = logging.getLogger(__name__)
 
@@ -61,7 +61,7 @@ def process_svg_nodes(app: Sphinx, doctree: nodes.document, docname: str):
     if app.builder.name != 'html':
         return
 
-    for node in doctree.traverse(nodes.image):
+    for node in doctree.findall(nodes.image):
         if node['uri'].endswith('.svg'):
             svg_path = app.srcdir / node['uri']
             try:
