@@ -1,6 +1,6 @@
 [project]
 name = "sphinx-inline-svg"
-version = "0.1.1"
+version = "0.1.2"
 description = "Sphinx extension to make svg images inline"
 authors = [{ name = "satamame", email = "satamame@gmail.com" }]
 license = { text = "MIT" }

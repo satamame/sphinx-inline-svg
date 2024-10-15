@@ -8,7 +8,7 @@ from sphinx.util import logging
 from sphinx.util.nodes import make_refnode
 from sphinx.writers.html import HTMLTranslator
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 logger = logging.getLogger(__name__)
 
