@@ -25,6 +25,9 @@
 
 ### ビルド
 
+1. dist フォルダを空にする。
+1. pyroject.toml のバージョンを更新。
+1. inline_svg.py の `__version__` を更新。
 1. rye の build コマンドを実行。
     ```
     > rye build
@@ -77,3 +80,7 @@
         - (*) settings.json の "python.testing.pytestPath"。
 - tests フォルダをカバレッジから除外するために、pyproject.toml の "tool.coverage.run" セクションで `omit` を設定している。
     - これの代わりに settings.json の "python.testing.pytestArgs" で `--cov=xx` 等と設定すると、`Run Tests` や `Debug Tests` で coverage が走ってしまう。そして `Debug Tests` がブレークポイントで止まらないという問題がある。
+
+## メンテナンス
+
+- Dependabot が Rye に対応していないので、定期的に `rye sync` すること。
