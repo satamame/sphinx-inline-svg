@@ -2,7 +2,7 @@
 
 ![](chart.drawio.svg){.inline-svg}
 
-![](custom.drawio.svg){.custom-svg}
+![](custom.drawio.svg){.custom-svg #foo}
 
 ![](undefined_target.drawio.svg){.undefined-target-svg}
 

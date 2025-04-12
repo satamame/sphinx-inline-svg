@@ -1,11 +1,11 @@
 [project]
 name = "sphinx-inline-svg"
-version = "0.1.2"
+version = "0.2.0"
 description = "Sphinx extension to make svg images inline"
 authors = [{ name = "satamame", email = "satamame@gmail.com" }]
 license = { text = "MIT" }
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Framework :: Sphinx",
     "Framework :: Sphinx :: Extension",
     "License :: OSI Approved :: MIT License",

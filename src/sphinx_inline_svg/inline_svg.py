@@ -8,7 +8,7 @@ from sphinx.util import logging
 from sphinx.util.nodes import make_refnode
 from sphinx.writers.html import HTMLTranslator
 
-__version__ = '0.1.2'
+__version__ = '0.2.0'
 
 logger = logging.getLogger(__name__)
 
@@ -101,7 +101,13 @@ def inline_svg(app, node, svg_path, docname):
 
     # Add attributes from original node to svg element.
     for key, value in node.non_default_attributes().items():
-        attr_key = 'class' if key == 'classes' else 'key'
+        if key == 'classes':
+            attr_key = 'class'
+        elif key == 'ids':
+            attr_key = 'id'
+        else:
+            attr_key = key
+
         if isinstance(value, list):
             root.set(attr_key, ' '.join(value))
         elif isinstance(value, str):
