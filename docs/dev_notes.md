@@ -44,6 +44,8 @@
     > rye publish --username __token__ --token pypi-ToKeN
     ```
 
+※ Metadata-Version がどうこうというエラーが出たら、成果物を zip 解凍して Metadata-Version を書き換えれば良い。
+
 ## テスト
 
 ### テスト環境の準備
